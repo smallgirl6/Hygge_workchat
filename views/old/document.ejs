@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hygge Workchat</title>
+    <link rel="stylesheet" type="text/css" href="/css/document.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="loading">
+        <img src="/icon/loading.gif" alt="Loading...">
+    </div>                
+    <div class="content">
+
+        <div class="navbar">
+            <img src="/Image/nvbar.jpg">
+            <div class="navbar-filter"></div>
+            <div class="userstatus" >
+                <div class="userpic" >
+                    <img src="">
+                </div>
+                <div class="colorball" >
+                    <img src="/icon/status/green-status.png">
+                </div>
+                <div class="username"></div>  
+                <select class="status-select">
+                    <option value="available">Available</option>
+                    <option value="busy">Busy</option>
+                    <option value="away">Away</option>
+                    <option value="offline">Offline</option>
+                </select>
+            </div>
+            <div class="itemssession">
+                <div class="items">
+                    <div class="item" href="#" id="index-link">
+                        <img src="/icon/nav/home.png" alt="Index" >
+                    </div>
+                    <div class="item" href="#" id="profiles-link">
+                        <img src="/icon/nav/profile.png" alt="Profiles">
+                    </div>
+                    <div class="item" href="#" id="chat-link">
+                        <img src="/icon/nav/chat.png" alt="Chat">
+                    </div>
+                    <div class="item" href="#" id="document-link">
+                        <img src="/icon/nav/document.png" alt="Document"
+                        >
+                    </div>
+                </div>
+            </div>       
+        </div>
+    
+        <div class="container ">
+            <div class="background-image">
+                <img src="/Image/pexels-jonathan-schmer-2364402.jpg">
+                <div class="background-image-profile-filter">
+                <!------------Rightbox ------------>
+                <div class="rightbox">
+                    <div class="sellectSession">
+                        <div class="createNewDoc">
+                            <img src="/icon/user/createdoc.png" alt="createNewDoc icon" onClick="">
+                            <div class="createNewDoctext">Create New Doc</div>
+                        </div>
+                         <div class="allDoc">
+                            <img src="/icon/user/alldocs.png" alt="allDoc icon" onClick="">
+                            <div class="allDoctext">All Docs</div>
+                        </div>
+                        <div class="allChat">
+                            <img src="/icon/user/chat.png" alt="allChat icon" onClick="">
+                            <div class="allChattext">All Chats</div>
+                        </div>
+                    </div>
+                    <div class="displaySession">
+
+                        <div class="introducebox">
+                            <div class="introduceinfo">
+                                <div class="introduce-close-icon">
+                                    <img src="/icon/user/close.png" alt="close-icon">
+                                 </div>   
+                                <div class="introduce">Introduce</div>
+                                <p class="introducetext">
+                                    To create a new document, click on 'Create New Doc'.&
+                                    &
+                                    To check your established documents, click on 'All Docs'.&
+                                    &
+                                    To check your chat history, click on 'allChat' and select your chat history with a friend in 'All Chats'.&
+                                    On the right side, your group's document will be displayed. You can edit the document with your friend.&
+                                    &
+                                    If you want to add other friends, click on the 'add friend' icon in the upper right corner of the file.
+                                </p>
+                            </div>      
+                        </div>
+
+                        <div class="history-room-doc">
+                            <!-- <div class="history-doc">   
+                                <div class="history-doc-pic">
+                                    <img src="/icon/user/alldoc.png" alt="history-doc-img" class="history-doc-img">
+                                </div>
+                                <div class="history-doc-info">
+                                    <div class="history-doc-name">ABCABCABC</div>
+                                </div>
+                                <div class="history-doc-lasttime">17'38</div>
+                                <div class="delete-icon">
+                                    <img src="/icon/user/trashcan.png" alt="delete-icon"> 
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <div class="history-room-chat">
+                            <!-- <div class="history-message">   
+                                <div class="history-message-pic">
+                                    <img src="/icon/user/groups.png" alt="history-message-img" class="history-message-img">
+                                </div>
+                                <div class="history-message-info">
+                                    <div class="history-message-name"></div>
+                                    <div class="history-message-lastmessage"></div>
+                                </div>
+                                <div class="history-message-lasttime"></div>
+                                <div class="delete-icon">
+                                    <img src="/icon/user/trashcan.png" alt="delete-icon"> 
+                                </div>
+                            </div>        -->
+                        </div>
+
+                        <div class="chatbox">
+                            <div class="chatinfo">   
+                                <div class="chatname">Chat Name
+                                    <img src="/icon/user/pen.png" alt="Edit chatname icon">
+                                </div>
+                            </div>
+                            <div class="messagesbox" id="messagesbox">
+                                <ul  class="messages" id="messages" >
+                                </ul>
+                            </div>
+                            <form id="form" action="">
+                                <input id="input" autocomplete="off" />
+                                <button>Send</button> 
+                            </form>      
+                        </div>
+                    </div> 
+                </div>    
+                    
+                <!------------Docbox ------------>
+                <div class="Docbox">
+                    <div class="Docinfo">
+                        <div class="Docname">Doc Name
+                            <img src="/icon/user/pen.png" alt="Edit chatname icon">
+                        </div>
+                        <div class="DocNotification">
+                            <img src="/icon/user/notification.png" alt="Room Notification icon">
+                        </div>
+                        <div class="Docbox-search">
+                            <input id="Docbox-emailInput" type="text" placeholder="Search for friends">
+                            <img src="/icon/user/search.png" alt="Search icon" onClick="addsearchuser()">
+                        </div>
+                        <div class="adduser">
+                            <img src="/icon/user/adduser.png" alt="Add user icon" onClick="adduser()" id="adduser-icon">
+                        </div>
+                    </div>
+                   <textarea id="collaborative-textarea" class="collaborative-textarea"></textarea>
+                   <div class="icon"></div>
+                   <div class="Docboxfilter">
+                        <div class="Docbox-Notification-box">
+                            <div class="Docbox-Notificationpic">
+                                <img src="" alt="userpic" class="Docbox-Notificationimg">
+                                </div>
+                            <div class="Docbox-Notification-info">
+                                <div class="Docbox-Notificationname"></div>
+                                <div class="Docbox-Notificationemail"></div>
+                            </div>
+                            <div class="Docbox-Notification-close-icon">
+                                <img src="/icon/user/close.png" alt="close-icon">
+                                </div>
+                        </div>
+                        <div class="Docbox-search-result-box">
+                            <div class="Docbox-searchpic">
+                                <img src="" alt="userpic" class="Docbox-searchpicimg">
+                                </div>
+                            <div class="Docbox-searchuser-info">
+                                <div class="Docbox-searchname"></div>
+                                <div class="Docbox-searchemail"></div>
+                            </div>
+                            <div class="Docbox-close-icon">
+                                <img src="/icon/user/close.png" alt="close-icon">
+                                </div>
+                        </div>
+                        <div class="noDocbox-search-result-box">
+                            <div class="noDocbox-searchpic">
+                                <img src="/icon/user/nouser.png" alt="userpic" class="noDocbox-searchpicimg">
+                                </div>
+                            <div class="noDocbox-searchuser-info">
+                                <div class="noDocbox-searchname">User not found</div>
+                            </div>
+                            <div class="noDocbox-close-icon">
+                                <img src="/icon/user/close.png" alt="close-icon">
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+ 
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module"src="/js/navbarmodule.js"></script>
+    <script type="text/javascript" src="/js/document.js"></script>
+</body>
+</html>

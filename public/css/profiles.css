@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
+body {
+    margin: 0px;
+    font-family:'Cabin',sans-serif !important;
+    font-style: normal;
+    font-weight: 700;
+    color: white;
+}
+.content{
+    display: none;
+    /* display: flex; */
+}
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navbar {
+    flex: 1;
+    height: 960px;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    background-repeat: repeat;
+}
+.navbar img {
+    width: 100%; 
+    height: 100%;
+    object-fit:cover;
+}
+.navbar-filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background-color:rgba(0, 0, 0, 0.3); */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.userstatus{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+.colorball{
+    position: absolute;
+    width: 30px;
+    height:30px;
+    top: 75px;
+    left:75px;  
+}
+.userpic {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 90px;
+    height:90px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+    box-shadow: 0px 0px 20px white, 0 0 30px green;
+    cursor: pointer;
+}
+.userpic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.userpic:hover{
+    background-color:rgba(0, 0, 0, 0.5);
+}
+.username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:  rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s;
+    text-shadow: 0px 0px 20px white, 0 0 30px green;
+    cursor: pointer;
+}
+.status-select {
+    font-size: 15px;
+    margin-left:20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color:rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.itemssession{
+    position: absolute;
+    top: 180px;
+    left: 0px;
+    width: 100%; 
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+}
+.items{
+    margin-top: 100px;
+    width: 100%; 
+    height: 100%;
+}
+.item{
+    display: flex;
+    position: relative;
+    width: 100%; 
+    height: 120px;
+    font-size: 20px;
+    transition: 0.3s;
+    margin-left:auto;
+    margin-right:auto;
+    margin: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.item img {
+    height: 80px;
+    width: 80px;
+    margin: auto;
+    transition: background-color 0.2s ease, color 0.2s ease;
+} 
+.item:hover img {
+    transform: translateY(-10px);
+}
+a {
+    text-decoration:none;
+}
+.item:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px #fff;
+}
+.item:hover,.item.active{
+    box-shadow: 0px 0px 20px white, 0 0 30px gold;
+}
+/******** container *********/
+.container {
+    margin-left: 130px;
+    flex: 2;
+    height: 100%;
+}
+.background-image-profile{
+    position: relative; 
+    width: 100%;
+    height:  960px;
+    margin: auto;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.background-image-profile img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.navigation-bar{
+    position: absolute;
+    display:flex; /* 讓下一層次的項目水平排列 */
+    align-items: center;
+    top: 10px; 
+    left: 30px;
+    right: 30px;
+    height: 100px;
+}
+.left{/* Hyggenini WorkChat */
+    flex: none; /* 自動把剩下空間填滿 */
+    font-size: 40px;
+    line-height: 44px;
+    text-shadow: 0 0 20px white, 0 0 30px gold;
+}
+.right{
+    flex: auto; /* 固定配置*/
+    display: flex; /* 讓下一層次的項目水平置中 */
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 44px;
+    text-align: center;
+    cursor: pointer;
+    gap: 50px; 
+}
+/***** profile *****/
+.profilepicsession{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 100px;
+    left: 30px;
+    right: 30px;
+    height: 350px;
+}
+.profilepic{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    /* object-fit: contain; */
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+} 
+.profilepic img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+.profilesession{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 500px;
+    left: 30px;
+    right: 30px;
+    height: 150px;
+    gap: 50px;
+    font-size: 24px;
+}
+.profilenamefile{
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    border-bottom: 2px solid  rgba(255, 255, 255, 0.5);
+}
+.profileemaillfile{
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    border-bottom: 2px solid  rgba(255, 255, 255, 0.5);
+
+}
+.profilename{
+    color: white;
+    margin-left: 25px;
+}
+.profileemail{
+    color: white;
+    margin-left: 25px;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 30px;
+    right: 30px;
+    height: 24px;
+    color: rgba(255, 255, 255, 0.5);
+}
+/***** edit profile *****/
+.background-image-edit {
+    display: none;
+    position: relative; 
+    width: 100%;
+    height:  960px;
+    margin: auto;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.background-image-edit  img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.editpicsession{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 100px;
+    left: 30px;
+    right: 30px;
+    height: 350px;
+}
+.edit-leftarrow{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.edit-leftarrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.editppic{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+} 
+.editpic img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.edit-rightarrow{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.edit-rightarrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.editsession{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 500px;
+    left: 30px;
+    right: 30px;
+    height: 150px;
+    gap: 20px;
+}
+.edit-input-upload{ 
+    display: none;
+    /* display: flex; */
+}
+.edit-input-img{
+    cursor: pointer;
+    font-size: 12px;
+}
+.clear-button{
+    margin-left: 5px;
+}
+.edit-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid  rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 24px;
+}
+.edit-input::placeholder {
+    color: white;
+}
+.change-button {
+    border-radius: 100px 100px 100px 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid white;
+    color: white;
+    width: 258px; 
+    font-size: 24px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    cursor: pointer; 
+}
+.change-message{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 24px;
+    text-shadow: 0px 0px 20px white, 0 0 30px  red;
+}
+.rule-message{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.slideOutToLeft {
+    animation: slideOutToLeft 0.5s;
+}
+
+.slideOutToRight {
+    animation: slideOutToRight 0.5s;
+}
+
+.slideInFromRight {
+    animation: slideInFromRight 0.5s;
+}
+
+.slideInFromLeft {
+    animation: slideInFromLeft 0.5s;
+}
+
+@keyframes slideOutToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+    
+
+.editprofile:hover, .signout:hover, .editprofile.active, .signout.active,.profile:hover, .profile.active ,
+.change-button:hover, .change-button.active {
+    text-shadow: 0 0 20px white, 0 0 30px gold;
+}
+.edit-leftarrow img:hover, .edit-leftarrow img.active, 
+.edit-rightarrow img:hover, .edit-rightarrow img.active {
+    box-shadow: 0px 0px 20px white, 0 0 30px gold;
+}
+
+@media (max-width:1800px){
+    .container{
+        width: 100%
+    }
+    .navigation-bar{
+        right: 250px;
+    }
+}
+
+@media (max-width:720px){
+    .container{
+        width: 100%
+    }
+    .left{/* Hyggenini WorkChat */
+        font-size: 28px;
+    }
+    .right{
+        font-size: 18px;
+        gap: 25px; 
+        right: 100px;
+    }
+}

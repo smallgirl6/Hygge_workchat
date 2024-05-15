@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
+body {
+    margin: 0px;   /*緊貼頂部(上下左右)，沒有空隙*/
+    font-family:'Cabin',sans-serif !important;
+    font-style: normal;
+    font-weight: 700;
+    color: white;
+}
+a {
+    text-decoration:none;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 100% of the viewport height */
+}
+.background-image-login {
+  position: relative; 
+  width: 800px;
+  height: 800px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.background-image-login img{
+    width: 800px;
+    height: 800px;
+    border-radius: 15px;
+    object-fit:cover;
+}
+
+.navigation-bar{
+    position: absolute;
+    z-index: 1;
+    display:flex; /* 讓下一層次的項目水平排列 */
+    align-items: center;
+    top: 10px;
+    left: 30px;
+    right: 30px;
+    height: 100px;
+}
+.left{/* Hygge WorkChat */
+    font-size: 40px;
+    line-height: 44px;
+    text-shadow: 0 0 20px white, 0 0 30px gold;
+}
+.right{
+    margin-left: 200px;
+    display: flex; /* 讓下一層次的項目水平置中 */
+    align-items: center;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 44px;
+    text-align: center;
+    cursor: pointer;
+    gap: 50px; 
+}
+.loginpicsession{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 100px;
+    left: 30px;
+    right: 30px;
+    height: 350px;
+}
+.loginpic{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    /* object-fit: contain; */
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+} 
+.loginpic img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+.loginsession{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 450px;
+    left: 30px;
+    right: 30px;
+    height: 150px;
+    gap: 50px;
+}
+.login-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid  rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 24px;
+}
+.login-input::placeholder {
+    color: white;
+}
+.login-button {
+    border-radius: 100px 100px 100px 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid white;
+    color: white;
+    width: 258px; 
+    font-size: 24px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    cursor: pointer; 
+  }
+.login-message{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 24px;
+    text-shadow: 0px 0px 20px white, 0 0 30px  red;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 30px;
+    right: 30px;
+    height: 24px;
+    color: rgba(255, 255, 255, 0.5);
+}
+/* ----------sign up ---------- */
+.background-image-signup {
+    display: none;
+    position: relative; 
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.background-image-signup  img{
+    width: 800px;
+    height: 800px;
+    border-radius: 15px;
+    object-fit:cover;
+}
+.signuppicsession{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 100px;
+    left: 30px;
+    right: 30px;
+    height: 350px;
+}
+.signup-leftarrow{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.signup-leftarrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.signuppic{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+} 
+.signuppic img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.signup-rightarrow{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.signup-rightarrow img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.signupsession{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 450px;
+    left: 30px;
+    right: 30px;
+    height: 150px;
+    gap: 20px;
+}
+.signup-input-upload{ 
+    display: flex;
+}
+.signup-input-img{
+    cursor: pointer;
+    font-size: 12px;
+}
+.clear-button{
+    margin-left: 5px;
+}
+.signup-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid  rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 24px;
+}
+.signup-input::placeholder {
+    color: white;
+}
+.signup-button {
+    border-radius: 100px 100px 100px 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid white;
+    color: white;
+    width: 258px; 
+    font-size: 24px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    cursor: pointer; 
+}
+.signup-message{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 24px;
+    text-shadow: 0px 0px 20px white, 0 0 30px  red;
+}
+
+
+.slideOutToLeft {
+    animation: slideOutToLeft 0.5s;
+}
+
+.slideOutToRight {
+    animation: slideOutToRight 0.5s;
+}
+
+.slideInFromRight {
+    animation: slideInFromRight 0.5s;
+}
+
+.slideInFromLeft {
+    animation: slideInFromLeft 0.5s;
+}
+
+@keyframes slideOutToLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideOutToRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+    
+
+.login:hover, .signup:hover, .login.active, .signup.active, 
+.login-button:hover, .login-button.active, .signup-button:hover, .signup-button.active {
+    text-shadow: 0 0 20px white, 0 0 30px gold;
+}
+.signup-leftarrow img:hover, .signup-leftarrow img.active, 
+.signup-rightarrow img:hover, .signup-rightarrow img.active {
+    box-shadow: 0px 0px 20px white, 0 0 30px gold;
+}
+
+@media (max-width:1200px){
+    .container{
+        width: 100%
+    }
+}
+
+@media (max-width:640px){
+    .container{
+        width: 100%
+    }
+}

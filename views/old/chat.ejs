@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hygge Workchat</title>
+    <link rel="stylesheet" type="text/css" href="/css/chat.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="loading">
+        <img src="/icon/loading.gif" alt="Loading...">
+    </div>                
+    <div class="content" style="display: none;">
+
+        <div class="navbar">
+            <img src="/Image/nvbar.jpg">
+            <div class="navbar-filter"></div>
+            <div class="userstatus" >
+                <div class="userpic" >
+                    <img src="">
+                </div>
+                <div class="colorball" >
+                    <img src="/icon/status/green-status.png">
+                </div>
+                <div class="username"></div>  
+                <select class="status-select">
+                    <option value="available">Available</option>
+                    <option value="busy">Busy</option>
+                    <option value="away">Away</option>
+                    <option value="offline">Offline</option>
+                </select>
+            </div>
+            <div class="itemssession">
+                <div class="items">
+                    <div class="item" href="#" id="index-link">
+                        <img src="/icon/nav/home.png" alt="Index">
+                    </div>
+                    <div class="item" href="#" id="profiles-link">
+                        <img src="/icon/nav/profile.png" alt="Profiles">
+                    </div>
+                    <div class="item" href="#" id="chat-link">
+                        <img src="/icon/nav/chat.png" alt="Chat">
+                    </div>
+                    <div class="item" href="#" id="document-link">
+                        <img src="/icon/nav/document.png" alt="Document">
+                    </div>
+                </div>
+            </div>       
+        </div>
+    
+        <div class="container ">
+            <div class="background-image">
+                <img src="/Image/pexels-jonathan-schmer-2364402.jpg">
+                <div class="background-image-profile-filter">
+                <!------------roombox ------------>
+                <div class="roombox">
+
+                    <div class="search">
+                      <input id="emailInput" type="text" placeholder="Search for friends">
+                      <img src="/icon/user/search.png" alt="Search icon" onClick="searchEmail()">
+                    </div>
+
+                    <div class="history-room">
+                        <!-- <div class="history-message">   
+                            <div class="history-message-pic">
+                                <img src="/icon/user/groups.png" alt="history-message-img" class="history-message-img">
+                            </div>
+                            <div class="history-message-info">
+                                <div class="history-message-name"></div>
+                                <div class="history-message-lastmessage"></div>
+                            </div>
+                            <div class="history-message-lasttime"></div>
+                            <div class="delete-icon">
+                                <img src="/icon/user/trashcan.png" alt="delete-icon"> 
+                            </div>
+                         </div> -->
+                    </div>
+
+                    <div class="history-room-filter" >
+                        <div class="result-box" id="resultBox">
+                            <div class="searchpic">
+                                <img src="" alt="userpic" class="searchpicimg">
+                            </div>
+                            <div class="searchuser-info">
+                                <div class="searchname"></div>
+                                <div class="searchemail"></div>
+                            </div>
+                            <div class="close-icon">
+                                <img src="/icon/user/close.png" alt="close-icon">
+                            </div>
+                        </div>
+                        <div class="noresult-box">
+                            <div class="searchpic">
+                                <img src="/icon/user/nouser.png" alt="userpic" class="searchpicimg">
+                            </div>
+                            <div class="nosearchuser-info">
+                            <div class="nosearchname">User not found</div>
+                            </div>
+                            <div class="noresult-close-icon">
+                                <img src="/icon/user/close.png" alt="close-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!------------chatbox ------------>
+                    <div class="chatbox">
+                        <div class="chatinfo">
+                            <div class="chatname">Chat Name
+                                <img src="/icon/user/pen.png" alt="Edit chatname icon">
+                            </div>
+                            <div class="chatNotification">
+                                <img src="/icon/user/notification.png" alt="Room Notification icon">
+                            </div>
+                            <div class="chatbox-search">
+                                <input id="chatbox-emailInput" type="text" placeholder="Search for friends">
+                                <img src="/icon/user/search.png" alt="Search icon" onClick="addsearchuser()">
+                            </div>
+                            <div class="adduser">
+                                <img src="/icon/user/adduser.png" alt="Add user icon" onClick="adduser()" id="adduser-icon">
+                            </div>
+                        </div>
+                        <div class="messagesbox" id="messagesbox">
+                            <ul  class="messages" id="messages" >
+                            </ul>
+                        </div>
+                        <div class="messagesboxfilter">
+                            <div class="chatbox-Notification-box">
+                                <div class="chatbox-Notificationpic">
+                                    <img src="" alt="userpic" class="chatbox-Notificationimg">
+                                 </div>
+                                <div class="chatbox-Notification-info">
+                                  <div class="chatbox-Notificationname"></div>
+                                  <div class="chatbox-Notificationemail"></div>
+                                </div>
+                                <!-- <div class="chatbox-Notification-close-icon">
+                                    <img src="/icon/user/close.png" alt="close-icon">
+                                 </div> -->
+                            </div>
+                            <div class="chatbox-search-result-box">
+                                <div class="chatbox-searchpic">
+                                    <img src="" alt="userpic" class="chatbox-searchpicimg">
+                                 </div>
+                                <div class="chatbox-searchuser-info">
+                                  <div class="chatbox-searchname"></div>
+                                  <div class="chatbox-searchemail"></div>
+                                </div>
+                                <div class="chatbox-close-icon">
+                                    <img src="/icon/user/close.png" alt="close-icon">
+                                 </div>
+                            </div>
+                            <div class="nochatbox-search-result-box">
+                                <div class="nochatbox-searchpic">
+                                    <img src="/icon/user/nouser.png" alt="userpic" class="chatbox-searchpicimg">
+                                 </div>
+                                <div class="nochatbox-searchuser-info">
+                                  <div class="nochatbox-searchname">User not found</div>
+                                </div>
+                                <div class="nochatbox-close-icon">
+                                    <img src="/icon/user/close.png" alt="close-icon">
+                                 </div>
+                            </div>
+                         </div>   
+                        <form id="form" action="">
+                            <input id="input" autocomplete="off" />
+                            <button>Send</button> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+ 
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module"src="/js/navbarmodule.js"></script>
+    <script type="text/javascript" src="/js/chat.js"></script>
+</body>
+</html>

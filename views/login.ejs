@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hygge Workchat</title>
+    <link rel="stylesheet" type="text/css" href="/css/login.css" >
+    <!-- <link rel="stylesheet" type="text/css" href="/index.css" > -->
+</head>
+<body>
+</head>
+<body>
+    <div class="container ">
+        <!------------login ------------>
+        <div class="background-image-login">
+            <img src="/Image/pexels-jonathan-schmer-2364402.jpg">
+            <div class="navigation-bar">
+                <div class="left">Hygge Workchat</div>
+                <div class="right">
+                    <div class="login" id="login"onclick="switchImage('login')">Login</div>
+                    <div class="signup" id="signup"onclick="switchImage('signup')">Sign up</div>
+                </div>
+            </div>   
+            <div class="loginpicsession" >
+                <div class="loginpic">
+                    <img src="/Image/userdefaultpic/puffin.png">
+                </div>
+            </div>
+            <div class="loginsession" >
+                <input class="login-input" type="email" placeholder="Email" name="login_email"/>
+                <input class="login-input" type="password" placeholder="Password" name="login_password"/>
+                <button class="login-button" >Enter</button>
+                <div class="login-message"></div>
+            </div>
+            <div class="footer" id="footer">COPYRIGHT © 2023 Work Chat Hyggenini</div>
+        </div>
+         <!------------sign up ------------>
+        <div class="background-image-signup">
+            <img src="/Image/pexels-pepe-caspers-2941985.jpg">
+            <div class="navigation-bar">
+                <div class="left">Hygge Workchat</div>
+                <div class="right">
+                    <div class="login" id="login"onclick="switchImage('login')">Login</div>
+                    <div class="signup" id="signup"onclick="switchImage('signup')">Sign up</div>
+                </div>
+            </div>   
+            <div class="signuppicsession" >
+                <div class="signup-leftarrow">
+                    <img src="/icon/arrow/left.png">
+                </div>
+                <div class="signuppic">
+                    <img src="/Image/userdefaultpic/user.png" class="current-pic">
+                    <img src="" class="next-pic">
+                    <input type="file" class="file-input" id="file-input" style="display:none;">
+                </div>
+                <div class="signup-rightarrow">
+                    <img src="/icon/arrow/right.png">
+                </div>             
+            </div>
+            <div class="signupsession">
+                <div class="signup-input-upload">
+                    <input class="signup-input-img" type="file" name="signup_file" accept="image/jpeg, image/png, image/jpg" onchange="displaySelectedImage(this)">
+                    <button id="clear-button">Clear</button>
+                </div>
+                <input class="signup-input" type="name" placeholder="Name" name="signup_name"/>
+                <input class="signup-input" type="email" placeholder="Email" name="signup_email"/>
+                <input class="signup-input" type="password" placeholder="Password" name="signup_password"/>
+                <button class="signup-button" >Enter</button>
+                <div class="signup-message"></div>
+            </div>
+            <div class="footer" id="footer">COPYRIGHT © 2023 Work Chat Hyggenini</div>
+        </div>
+    </div>
+    <script type="text/javascript"src="/js/login.js"></script>   
+</body>
+</html>

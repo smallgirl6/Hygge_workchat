@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hygge Workchat</title>
+    <link rel="stylesheet" type="text/css" href="/css/profiles.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="loading">
+        <img src="/icon/loading.gif" alt="Loading...">
+    </div>                
+    <div class="content" style="display: none;">
+
+        <div class="navbar">
+            <img src="/Image/nvbar.jpg">
+            <div class="navbar-filter"></div>
+            <div class="userstatus" >
+                <div class="userpic" >
+                    <img src="">
+                </div>
+                <div class="colorball" >
+                    <img src="/icon/status/green-status.png">
+                </div>
+                <div class="username"></div>  
+                <select class="status-select">
+                    <option value="available">Available</option>
+                    <option value="busy">Busy</option>
+                    <option value="away">Away</option>
+                    <option value="offline">Offline</option>
+                </select>
+            </div>
+            <div class="itemssession">
+                <div class="items">
+                    <div class="item" href="#" id="index-link">
+                        <img src="/icon/nav/home.png" alt="Index">
+                    </div>
+                    <div class="item" href="#" id="profiles-link">
+                        <img src="/icon/nav/profile.png" alt="Profiles">
+                    </div>
+                </div>
+            </div>       
+        </div>
+    
+        <div class="container ">
+            <!------------profile ------------>
+            <div class="background-image-profile">
+                <img src="/Image/pexels-jonathan-schmer-2364402.jpg">
+                <div class="navigation-bar">
+                    <div class="left">Profile</div>
+                    <div class="right">
+                        <div class="editprofile" id="editprofile" onclick="switchImage('editprofile')">Edit profile</div>
+                        <div class="signout" id="signout">Sign out</div>
+                    </div>
+                </div>   
+                <div class="profilepicsession" >
+                    <div class="profilepic">
+                        <img src="">
+                    </div>
+                </div>
+                <div class="profilesession" >
+                    <div class="profilenamefile">Name:
+                        <div class="profilename"></div>
+                    </div>
+                    <div class="profileemaillfile">Email:
+                        <div class="profileemail"></div>
+                    </div>
+                </div>
+                <div class="footer" id="footer">COPYRIGHT © 2023 Work Chat Hyggenini</div>
+            </div>
+             <!------------edit profile ------------>
+            <div class="background-image-edit">
+                <img src="/Image/pexels-jonathan-schmer-2364402.jpg">
+                <div class="navigation-bar">
+                    <div class="left">Edit Profile</div>
+                    <div class="right">
+                        <div class="profile" id="profile" onclick="switchImage('profile')">Profile</div>
+                        <div class="signout" id="signout">Sign out</div>
+                    </div>
+                </div>  
+                <div class="editpicsession" >
+                    <div class="edit-leftarrow">
+                        <img src="/icon/arrow/left.png">
+                    </div>
+                    <div class="editppic">
+                        <img src="" class="current-pic">
+                        <img src="" class="next-pic">
+                        <input type="file" class="file-input" id="file-input" style="display:none;">
+                    </div>
+                    <div class="edit-rightarrow">
+                        <img src="/icon/arrow/right.png">
+                    </div>             
+                </div>
+                <div class="editsession">
+                    <div class="edit-input-upload">
+                        <input class="edit-input-img" type="file" name="signup_file" accept="image/jpeg, image/png, image/jpg" onchange="displaySelectedImage(this)">
+                        <button id="clear-button">Clear</button>
+                    </div>
+                    <input class="edit-input" type="name" placeholder="New name" name="edit_name"/>
+                    <input class="edit-input" type="password" placeholder="New password" name="edit_password"/>
+                    <button class="change-button" >Change</button>
+                    <div class="change-message"></div>
+                    <div class="rule-message">You can change your profile picture, name or password.<br> 
+
+                        
+                        If you don't want to change the picture, <br> please keep the original picture.<br>  
+                        If you don't want to change your username or password, <br> please leave the fields blank.</div>
+                </div>
+                <div class="footer" id="footer">COPYRIGHT © 2023 Work Chat Hyggenini</div>
+            </div>
+        </div>
+    </div>
+    <script type="module"src="/js/navbarmodule.js"></script>
+    <script type="text/javascript" src="/js/profiles.js"></script>
+</body>
+</html>

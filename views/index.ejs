@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hygge Workchat</title>
+    <link rel="stylesheet" type="text/css" href="/css/index.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="loading">
+        <img src="/icon/loading.gif" alt="Loading...">
+    </div>                
+    <div class="content">
+
+        <div class="navbar">
+            <img src="/Image/nvbar.jpg">
+            <div class="navbar-filter"></div>
+            <div class="userstatus" >
+                <div class="userpic" >
+                    <img src="">
+                </div>
+                <div class="colorball" >
+                    <img src="/icon/status/green-status.png">
+                </div>
+                <div class="username"></div>  
+                <select class="status-select">
+                    <option value="available">Available</option>
+                    <option value="busy">Busy</option>
+                    <option value="away">Away</option>
+                    <option value="offline">Offline</option>
+                </select>
+            </div>
+            
+            <div class="itemssession">
+                <div class="chatNotification">
+                    <img src="/icon/user/notification.png" alt="Room Notification icon">
+                </div>
+                <div class="chatbox-Notification-box">
+                    <div class="chatbox-Notificationpic">
+                        <img src="" alt="userpic" class="chatbox-Notificationimg">
+                     </div>
+                    <div class="chatbox-Notification-info">
+                      <div class="chatbox-Notificationname"></div>
+                      <div class="chatbox-Notificationemail"></div>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="item" href="#" id="index-link">
+                        <img src="/icon/nav/home.png" alt="Index" >
+                    </div>
+                    <div class="item" href="#" id="profiles-link">
+                        <img src="/icon/nav/profile.png" alt="Profiles">
+                    </div>
+                </div>
+            </div>       
+        </div>
+    
+        <div class="container ">
+            <div class="background-image">
+                <img src="/Image/pexels-jonathan-schmer-2364402.jpg">
+                <div class="background-image-profile-filter">
+                <!------------Rightbox ------------>
+                <div class="rightbox">
+                    <div class="sellectSession">
+                        <div class="findUser">
+                            <img src="/icon/user/user.png" alt="createNewDoc icon" onClick="">
+                            <div class="findUsertext">Find User</div>
+                        </div>
+                         <div class="allDoc">
+                            <img src="/icon/user/createdoc.png" alt="allDoc icon" onClick="">
+                            <div class="allDoctext">All Docs</div>
+                        </div>
+                        <div class="allChat">
+                            <img src="/icon/user/chat.png" alt="allChat icon" onClick="">
+                            <div class="allChattext">All Chats</div>
+                        </div>
+                    </div>
+                    <div class="displaySession">
+
+                        <div class="introducebox">
+                            <div class="introduceinfo">
+                                <div class="introduce-close-icon">
+                                    <img src="/icon/user/close.png" alt="close-icon">
+                                 </div>   
+                                <div class="introduce">Introduce</div>
+                                <p class="introducetext">
+                                    Click "Find User" to search for online partners or chat with ChatGPT.&
+                                    &
+                                    To check your established documents, click on 'All Docs'.&
+                                    &
+                                    To check your chat history, click on 'allChat' and select your chat history with a friend in 'All Chats'.&
+                                    On the right side, your group's document will be displayed. You can edit the document with your friend.&
+                                    &
+                                    If you want to add other friends, click on the 'add friend' icon in the upper right corner of the file.
+                                </p>
+                            </div>      
+                        </div>
+
+                        <div class="display-alluser">
+                            <div class="displayAI">   
+                                <div class="displayAI-pic">
+                                    <img src="/icon/user/AI@gmail.com.jpg" alt="creat-new-doc-img" class="creat-new-doc-img">
+                                </div>
+                                <p class="displayAItext">
+                                    Hello, I'm ChatGPT.& 
+                                    I can answer various questions.
+                                </p>       
+                            </div> 
+                            <div class="recommended-users">
+                                <h3>You might know these users:</h3>
+                                <div class="user-list"></div>
+                            </div>
+                             <!-- <div class="displayuser">   
+                                <div class="displayuser-pic">
+                                    <img src="/icon/user/AI@gmail.com.jpg" alt="displayuser-img" class="displayuser-pic-img">
+                                    <div class="usercolorball" >
+                                        <img src="/icon/status/green-status.png">
+                                    </div>  
+                                </div>
+                                <div class="displayuser-info">
+                                    <div class="displayuser-name"></div>
+                                    <div class="displayuser-email"></div>
+                                </div>
+                            </div>        -->
+                            
+                        </div>
+
+                        <div class="history-room-doc">
+                            <div class="creat-new-doc">   
+                                <div class="creat-new-doc-pic">
+                                    <img src="/icon/user/addnew.png" alt="creat-new-doc-img" class="creat-new-doc-img">
+                                </div>     
+                            </div> 
+                            <!-- <div class="history-doc">   
+                                <div class="history-doc-pic">
+                                    <img src="/icon/user/alldoc.png" alt="history-doc-img" class="history-doc-img">
+                                </div>
+                                <div class="history-doc-info">
+                                    <div class="history-doc-name">ABCABCABC</div>
+                                </div>
+                                <div class="history-doc-lasttime">17'38</div>
+                                <div class="delete-icon">
+                                    <img src="/icon/user/trashcan.png" alt="delete-icon"> 
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <div class="history-room-chat">
+                            <div class="creat-new-chat">   
+                                <div class="creat-new-chat-pic">
+                                    <img src="/icon/user/addnew.png" alt="creat-new-chat-img" class="creat-new-chat-img">
+                                </div>       
+                            </div> 
+                            <!-- <div class="history-message">   
+                                <div class="history-message-pic">
+                                    <img src="/icon/user/groups.png" alt="history-message-img" class="history-message-img">
+                                </div>
+                                <div class="history-message-info">
+                                    <div class="history-message-name"></div>
+                                    <div class="history-message-lastmessage"></div>
+                                </div>
+                                <div class="history-message-lasttime"></div>
+                                <div class="delete-icon">
+                                    <img src="/icon/user/trashcan.png" alt="delete-icon"> 
+                                </div>
+                            </div>        -->
+                        </div>
+
+                        <div class="chatbox">
+                            <div class="chatinfo">   
+                                <div class="chatname">
+                                    <span>Chat name</span>
+                                    <img src="/icon/user/pen.png" alt="Edit chatname icon" class="chatnameimg">
+                                </div>
+                                <div class="adduser">
+                                    <img src="/icon/user/adduser.png" alt="Add user icon"  class="adduser-icon1" id="adduser-icon1" >
+                                </div>
+                            </div>
+                            <div class="messagesbox" id="messagesbox">
+                                <div class="messagesbox-filter" id="messagesbox-filter">
+                      
+                                    <div class="chatbox-search">
+                                        <input id="chatbox-emailInput" type="text" placeholder="Search for friends">
+                                        <img src="/icon/user/search.png" alt="Search icon" class="addusearchuserChat">
+                                    </div>
+
+                                    <div class="chatbox-search-result-box">
+                                        <div class="chatbox-searchpic">
+                                            <img src="" alt="userpic" class="chatbox-searchpicimg">
+                                         </div>
+                                        <div class="chatbox-searchuser-info">
+                                          <div class="chatbox-searchname"></div>
+                                          <div class="chatbox-searchemail"></div>
+                                        </div>
+                                        <div class="chatbox-close-icon">
+                                            <img src="/icon/user/close.png" alt="close-icon">
+                                         </div>
+                                    </div>
+                                    <div class="nochatbox-search-result-box">
+                                        <div class="nochatbox-searchpic">
+                                            <img src="/icon/user/nouser.png" alt="userpic" class="chatbox-searchpicimg">
+                                         </div>
+                                        <div class="nochatbox-searchuser-info">
+                                          <div class="nochatbox-searchname">User not found</div>
+                                        </div>
+                                        <div class="nochatbox-close-icon">
+                                            <img src="/icon/user/close.png" alt="close-icon">
+                                         </div>
+                                    </div>
+                                </div>
+                                <ul  class="messages" id="messages" >
+                                </ul>
+                            </div>
+                            <form id="form" class="chatbox-form" action="">
+                                <button id="uploadButton" class="uploadButton">
+                                  <img src="/icon/user/pic.png" alt="Upload"  class="Uploadimg">
+                                </button>
+                                  <input type="file" id="fileInput" accept="image/*" style="display:none">
+                                  <div class="inputtext" id="inputtext">
+                                    <input id="input" autocomplete="off" />
+                                  </div>
+                                <button class="sendButton">Send</button>
+                            </form>   
+                        </div>
+                    </div> 
+                </div>    
+                
+                
+                
+                <!------------Docbox ------------>
+                <div class="Docbox">
+                    <div class="Docinfo">
+                        <div class="Docname">
+                            <span>Doc name</span>
+                            <img src="/icon/user/pen.png" alt="Edit chatname icon" class="Docnameimg">
+                        </div>
+                        <div class="DocNotification">
+                            <img src="/icon/user/notification.png" alt="Room Notification icon">
+                        </div>
+                        <div class="Docbox-search">
+                            <input id="Docbox-emailInput" type="text" placeholder="Search for friends">
+                            <img src="/icon/user/search.png" alt="Search icon" class="addusearchuserDoc">
+                        </div>
+                        <div class="adduser">
+                            <img src="/icon/user/adduser.png" alt="Add user icon" class="adduser-icon2" id="adduser-icon2" >
+                        </div>
+                    </div>
+                   <div class="change-text-style">
+                        <!-- <div class="change-text-style-uploadpic">
+                             <img src="/icon/user/pic.png" alt="uploadpic" class="change-text-style-uploadpic-img">
+                        </div> -->
+
+                        <div id="change-text-style-uploadpic" class="change-text-style-uploadpic">
+                            <img src="/icon/user/pic.png" alt="uploadpic"  class="change-text-style-uploadpic-img">
+                        </div>
+                        <input type="file" id="change-text-style-uploadpic-Input" accept="image/*" style="display:none">
+
+                        <div class="change-text-style-color">
+                            <input type="color" id="color-picker" class="change-text-style-color-input">
+                            <label for="color-picker"><img src="/icon/user/color.png" alt="color" class="change-text-style-color-img"></label>
+                        </div>
+                        <div class="change-text-style-size">
+                            <div class="change-text-style-size-wrapper">
+                                <label for="size-select"><img src="/icon/user/size.png" alt="size" class="change-text-style-size-img"></label>
+                                <select id="size-select" class="size-select">
+                                  <option value="8px">8</option>
+                                  <option value="10px">10</option>
+                                  <option value="12px">12</option>
+                                  <option value="16px">16</option>
+                                  <option value="18px">18</option>
+                                  <option value="20px">20</option>
+                                  <option value="24px">24</option>
+                                  <option value="36px">36</option>
+                                  <option value="48px">48</option>
+                                  <option value="64px">64</option>
+                                </select>
+                              </div>
+                        </div>
+                   </div>
+                   <div id="collaborative-div" class="collaborative-div" contenteditable="true"></div>
+                   <!-- <textarea id="collaborative-textarea" class="collaborative-textarea"></textarea> -->
+                   <div class="icon"></div>
+                   <div class="Docboxfilter">
+                        <div class="Docbox-Notification-box">
+                            <div class="Docbox-Notificationpic">
+                                <img src="" alt="userpic" class="Docbox-Notificationimg">
+                            </div>
+                            <div class="Docbox-Notification-info">
+                                <div class="Docbox-Notificationname"></div>
+                                <div class="Docbox-Notificationemail"></div>
+                            </div>
+                            <div class="Docbox-Notification-close-icon">
+                                <img src="/icon/user/close.png" alt="close-icon">
+                                </div>
+                        </div>
+                        <div class="Docbox-search-result-box">
+                            <div class="Docbox-searchpic">
+                                <img src="" alt="userpic" class="Docbox-searchpicimg">
+                                </div>
+                            <div class="Docbox-searchuser-info">
+                                <div class="Docbox-searchname"></div>
+                                <div class="Docbox-searchemail"></div>
+                            </div>
+                            <div class="Docbox-close-icon">
+                                <img src="/icon/user/close.png" alt="close-icon">
+                                </div>
+                        </div>
+                        <div class="noDocbox-search-result-box">
+                            <div class="noDocbox-searchpic">
+                                <img src="/icon/user/nouser.png" alt="userpic" class="noDocbox-searchpicimg">
+                                </div>
+                            <div class="noDocbox-searchuser-info">
+                                <div class="noDocbox-searchname">User not found</div>
+                            </div>
+                            <div class="noDocbox-close-icon">
+                                <img src="/icon/user/close.png" alt="close-icon">
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+ 
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module"src="/js/navbarmodule.js"></script>
+    <script type="module"src="/js/indexmodule.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>
